@@ -4,7 +4,10 @@ import (
 	"reflect"
 )
 
-func FieldMap(from interface{}, to interface{}) {
+// OnFields maps fields with the same name from one
+// struct to another.
+//  OnFields(&from, &to)
+func OnFields(from interface{}, to interface{}) {
 	fromMap := make(map[string]reflect.Value)
 
 	tFrom := reflect.TypeOf(from).Elem()

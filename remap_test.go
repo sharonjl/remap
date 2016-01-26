@@ -39,10 +39,10 @@ var studentA = &StudentDetail{
 	ModifiedOn:  &studentAModified,
 }
 
-func TestFieldMapping(t *testing.T) {
+func TestOnFields(t *testing.T) {
 	b := &Student{}
 
-	FieldMap(studentA, b)
+	OnFields(studentA, b)
 	if b.Name != studentA.Name ||
 		b.Grade != studentA.Grade {
 		t.Errorf("failed copying primitive values")
